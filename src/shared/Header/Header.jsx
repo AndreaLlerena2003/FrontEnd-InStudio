@@ -2,7 +2,10 @@ import LogoInStudio from '../../assets/LogoInStudio.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Header.css';
+import { Link, useLocation } from 'react-router-dom';
+
 function Header(){
+    const location = useLocation();
     return(
        <nav className="navbar navbar-expand-lg navbar-light bg-light">
          <div className='container-fluid'>
@@ -14,17 +17,17 @@ function Header(){
             </button>
             <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                 <ul className='navbar-nav me-auto mb-2 mb-lg-0 color-items'> 
-                    <li className='nav-item'> 
-                        <a className='nav-link color-items' href='/home'>Home</a>
+                    <li className={`nav-item ${location.pathname === '/home' ? 'active' : ''}`}> 
+                        <Link to="/home" className="nav-link color-items" aria-current={location.pathname === '/home' ? 'page' : undefined}>Home</Link>
                     </li>
-                    <li class="nav-item">
-                        <a className="nav-link color-items" href="/partner">Become Partner</a>
+                    <li className={`nav-item ${location.pathname === '/partner' ? 'active' : ''}`}>
+                        <Link to="/partner" className="nav-link color-items" aria-current={location.pathname === '/partner' ? 'page' : undefined}>Become Partner</Link>
                     </li>
-                    <li className='nav-item'> 
-                        <a className='nav-link color-items' href='/terms'>Terms & Conditions</a>
+                    <li className={`nav-item ${location.pathname === '/terms' ? 'active' : ''}`}> 
+                        <Link to="/terms" className="nav-link color-items" aria-current={location.pathname === '/terms' ? 'page' : undefined}>Terms & Conditions</Link>
                     </li>
-                    <li>
-                        <a className='nav-link color-items' href='/contact'>Contact Us</a>
+                    <li className={`nav-item ${location.pathname === '/contact' ? 'active' : ''}`}>
+                        <Link to="/contact" className="nav-link color-items" aria-current={location.pathname === '/contact' ? 'page' : undefined}>Contact Us</Link>
                     </li>
                 </ul>
             </div>
