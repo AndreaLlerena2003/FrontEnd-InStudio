@@ -15,16 +15,16 @@ function Header(){
             <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                 <ul className='navbar-nav me-auto mb-2 mb-lg-0 color-items'> 
                     <li className='nav-item'> 
-                        <a className='nav-link color-items'>About</a>
+                        <a className='nav-link color-items' href='/home'>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a className="nav-link color-items" aria-current="page" href="#">Become Partner</a>
+                        <a className="nav-link color-items" href="/partner">Become Partner</a>
                     </li>
                     <li className='nav-item'> 
-                        <a className='nav-link color-items'>Terms & Conditions</a>
+                        <a className='nav-link color-items' href='/terms'>Terms & Conditions</a>
                     </li>
                     <li>
-                        <a className='nav-link color-items'>Contact Us</a>
+                        <a className='nav-link color-items' href='/contact'>Contact Us</a>
                     </li>
                 </ul>
             </div>
