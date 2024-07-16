@@ -20,9 +20,6 @@ function Header(){
                     <li className={`nav-item ${location.pathname === '/home' ? 'active' : ''}`}> 
                         <Link to="/home" className="nav-link color-items" aria-current={location.pathname === '/home' ? 'page' : undefined}>Home</Link>
                     </li>
-                    <li className={`nav-item ${location.pathname === '/partner' ? 'active' : ''}`}>
-                        <Link to="/partner" className="nav-link color-items" aria-current={location.pathname === '/partner' ? 'page' : undefined}>Become Partner</Link>
-                    </li>
                     <li className={`nav-item ${location.pathname === '/terms' ? 'active' : ''}`}> 
                         <Link to="/terms" className="nav-link color-items" aria-current={location.pathname === '/terms' ? 'page' : undefined}>Terms & Conditions</Link>
                     </li>
