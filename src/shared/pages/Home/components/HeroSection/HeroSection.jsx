@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './HeroSection.css';
-import HeroImageMobile from '../../../../assets/02_MobileLanding.png';
+import HeroImageMobile from '../../../../../assets/02_MobileLanding.png';
 
 function HeroSection(){
     return(
