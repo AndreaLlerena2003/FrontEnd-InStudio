@@ -1,3 +1,20 @@
 .boton{
     background-color: #7879ED;
 }
+
+.stack-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 0;
+}
+
+@media (max-width: 992px) {
+    .hstack {
+        flex-direction: row; /* Asegurarse de que permanezca en fila pero con flex-wrap */
+    }
+    .hstack > * {
+        flex: 1 1 100%; /* Hacer que cada elemento ocupe el 100% del ancho, apilando así en filas */
+    }
+    
+}

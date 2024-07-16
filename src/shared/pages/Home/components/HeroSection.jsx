@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import HeroImage from '../../../../assets/01_LandingPage.png';
 import './HeroSection.css';
+import HeroImageMobile from '../../../../assets/02_MobileLanding.png';
 function HeroSection(){
     return(
         <header>
-            <div className='hstack gap-0'>
+            <div className='stack-container hstack gap-0'>
                 <div className='stack-class vstack gap-0 justify-content-center'>
                     <h1>We Have the Pefect Hair</h1>
                     <h1>Salon for You</h1>
@@ -16,8 +16,7 @@ function HeroSection(){
                     </div>
                 </div>
                 <img className="hero-img" style={{ 
-                        width: '50%', 
-                        marginTop:'1.2%'}}  src={HeroImage}>
+                        width: '50%'}}  src={HeroImageMobile}>
                 </img>   
             </div>
         </header>
