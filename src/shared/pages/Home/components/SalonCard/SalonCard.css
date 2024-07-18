@@ -5,3 +5,12 @@
 .text-card{
     font-size: 0.8rem;
 }
+
+
+.custom-card{
+    border-radius: 1rem;
+}
+
+.b-card{
+    background-color: #7879ED;
+}
