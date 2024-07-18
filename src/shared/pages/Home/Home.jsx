@@ -7,6 +7,13 @@ import SpaAsset from '../../../assets/Spa_Asset.png';
 import React from 'react';
 
 function Home(){
+   
+    const salons = [
+        {image: SpaAsset,name: "Spa Caminos",precio: "20$",pais: "Peru"},
+        {image: SpaAsset,name: "Spa Caminos",precio: "20$",pais: "Peru"},
+        {image: SpaAsset,name: "Spa Caminos",precio: "20$",pais: "Peru"},
+        {image: SpaAsset,name: "Spa Caminos",precio: "20$",pais: "Peru"}
+    ];
     return(
         <React.Fragment>
             <HeroSection/>
