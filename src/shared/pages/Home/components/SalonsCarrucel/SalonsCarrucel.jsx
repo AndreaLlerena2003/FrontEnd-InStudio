@@ -17,7 +17,6 @@ function SalonCarrucel(props) {
         slidesToShow: 3, // mostrar tres tarjetas al mismo tiempo 
         slidesToScroll: 1, // mover una tarjeta por vez cuando se navega.
         swipeToSlide: true, //deslizar al arrastrar con el mouse 
-       // centerMode: true,
         centerPadding: '2',
         responsive: [
             {
@@ -45,7 +44,7 @@ function SalonCarrucel(props) {
     };
 
     return (
-       <div className='container'>
+       <div className='container mt-5'>
             <Slider {...settings} >
                 <div>
                     <SalonCard image={SpaAsset} />
