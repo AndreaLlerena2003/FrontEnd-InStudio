@@ -17,17 +17,17 @@ function SalonCarrucel(props) {
         slidesToShow: 3, // mostrar tres tarjetas al mismo tiempo 
         slidesToScroll: 1, // mover una tarjeta por vez cuando se navega.
         swipeToSlide: true, //deslizar al arrastrar con el mouse 
-        centerPadding: '2',
+        centerPadding: '0',
         responsive: [
             {
-                breakpoint: 1500, // pantalla más grande
+                breakpoint: 1700, // pantalla más grande
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 1400, // pantalla pequeña
+                breakpoint: 1200, // pantalla pequeña
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,

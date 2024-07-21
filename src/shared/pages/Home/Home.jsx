@@ -6,6 +6,7 @@ import SalonCard from './components/SalonCard/SalonCard.jsx';
 import SpaAsset from '../../../assets/Spa_Asset.png';
 import React from 'react';
 import SalonCarrucel from './components/SalonsCarrucel/SalonsCarrucel.jsx';
+import ServicesSection from './components/ServicesSection/ServicesSection.jsx';
 function Home(){
    
     const salons = [
@@ -18,7 +19,8 @@ function Home(){
         <React.Fragment>
             <HeroSection/>
             <SectionRow/>
-            <SalonCarrucel></SalonCarrucel>
+            <SalonCarrucel/>
+            <ServicesSection/>
         </React.Fragment>
     )
 }

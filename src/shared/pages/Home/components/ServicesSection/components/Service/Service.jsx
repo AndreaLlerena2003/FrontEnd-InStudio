@@ -1,14 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+import HaircutImage from '../../../../../../../assets/Haircut_Service.png';
 
 function Service(){
     return(
-        <div className='vstack gap-3'>
-            <img></img>
-            <h5>Haircut</h5>
-            <p>We provide direct rental services when you need wherever you are. Our officers are quick to respond in carrying out this task . . .</p>
-            <hr></hr>
+        <div className='card custom-card-service'>
+             <img src={HaircutImage} class="card-img-top" alt="..."/>
+             <div className='card-body'>
+                <h5 class="card-title">Haircut</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+             </div>
         </div>
     )
 }
+
+export default Service;
