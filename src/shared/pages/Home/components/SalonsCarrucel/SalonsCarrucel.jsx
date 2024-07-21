@@ -6,7 +6,7 @@ import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-
+import './SalonsCarrucel.css';
 
 
 function SalonCarrucel(props) {
@@ -17,11 +17,36 @@ function SalonCarrucel(props) {
         slidesToShow: 3, // mostrar tres tarjetas al mismo tiempo 
         slidesToScroll: 1, // mover una tarjeta por vez cuando se navega.
         swipeToSlide: true, //deslizar al arrastrar con el mouse 
+       // centerMode: true,
+        centerPadding: '2',
+        responsive: [
+            {
+                breakpoint: 1500, // pantalla más grande
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1400, // pantalla pequeña
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1000, // pantalla muy pequeña
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     };
 
     return (
-        <div className='container'>
-            <Slider {...settings}>
+       <div className='container'>
+            <Slider {...settings} >
                 <div>
                     <SalonCard image={SpaAsset} />
                 </div>
@@ -42,6 +67,7 @@ function SalonCarrucel(props) {
                 </div>
             </Slider>
         </div>
+     
     );
 }
 

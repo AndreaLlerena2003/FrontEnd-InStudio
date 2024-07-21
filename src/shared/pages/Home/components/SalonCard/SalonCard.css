@@ -10,6 +10,7 @@
 .custom-card{
     border-radius: 2rem;
     width: 25rem;
+    display: inline-block;
 }
 
 .b-card{
