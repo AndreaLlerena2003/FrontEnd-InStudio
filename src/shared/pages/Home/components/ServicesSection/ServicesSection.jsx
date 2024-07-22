@@ -23,7 +23,7 @@ function ServicesSection(){
         {
             id: 2,
             image: Nail_IMG,
-            title: "Haircut",
+            title: "Nails",
             description: "We provide direct rental services when you need wherever you are. Our officers are quick to respond in carrying out this task"
         }
     ]
