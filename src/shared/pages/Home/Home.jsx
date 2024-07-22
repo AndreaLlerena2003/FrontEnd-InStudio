@@ -9,7 +9,7 @@ import SalonCarrucel from './components/SalonsCarrucel/SalonsCarrucel.jsx';
 import ServicesSection from './components/ServicesSection/ServicesSection.jsx';
 import AdvantagesSection from './components/AdvantagesSection/AdvantagesSection.jsx';
 function Home(){
-   //cambioooooooooooooooos
+
     const salons = [
         {image: SpaAsset,name: "Spa Caminos",precio: "20$",pais: "Peru"},
         {image: SpaAsset,name: "Spa Caminos",precio: "20$",pais: "Peru"},
