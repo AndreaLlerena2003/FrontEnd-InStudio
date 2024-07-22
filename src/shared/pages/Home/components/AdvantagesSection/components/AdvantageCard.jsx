@@ -16,5 +16,5 @@ function AdvantageCard(){
         </div>
     )
 }
-
+//coment
 export default AdvantageCard;
