@@ -1,9 +1,11 @@
 .p-adv-card{
   font-size: 0.6rem;  
-  width: 50%;
-  margin: 0 auto;
 }
 
 .h6-adv-card{
     font-size: 0.8rem;
+}
+
+.text-cont-card-adv{
+  width: 30%;
 }
