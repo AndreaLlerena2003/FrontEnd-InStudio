@@ -17,13 +17,13 @@ function Home(){
         {image: SpaAsset,name: "Spa Caminos",precio: "20$",pais: "Peru"}
     ];
     return(
-        <React.Fragment>
+        <div className='container-fluid ml-5 overflow-x: hidden'>
             <HeroSection/>
             <SectionRow/>
             <SalonCarrucel/>
             <ServicesSection/>
             <AdvantagesSection></AdvantagesSection>
-        </React.Fragment>
+        </div>
     )
 }
 

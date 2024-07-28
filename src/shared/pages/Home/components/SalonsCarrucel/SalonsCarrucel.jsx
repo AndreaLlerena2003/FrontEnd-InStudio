@@ -8,7 +8,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import './SalonsCarrucel.css';
 
-
 function SalonCarrucel(props) {
     const settings = {
         dots: true, // puntos de navegacion
