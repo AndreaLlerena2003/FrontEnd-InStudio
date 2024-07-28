@@ -35,7 +35,7 @@ const AdvantageInformation = [
 ]
 function AdvantagesSection(){
     return(
-      <div className='container d-flex justify-content-center big-container-advantages'>
+      <div className='container d-flex justify-content-center'>
         <AdvantageGrid advantages={AdvantageInformation}/>
       </div>
     )

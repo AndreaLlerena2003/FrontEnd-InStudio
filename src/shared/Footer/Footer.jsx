@@ -4,7 +4,7 @@ import Logo from '../../assets/LogoInStudio.png';
 
 function Footer(){
     return(
-            <div className='container'>
+            <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-4'>
                         <img src={Logo} width="50" height="50"></img>
