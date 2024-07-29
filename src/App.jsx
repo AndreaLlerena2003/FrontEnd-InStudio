@@ -13,6 +13,7 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />}/>
         </Routes>
+        <FooterSection/>
       </div>
     </Router>
   );
