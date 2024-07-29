@@ -1,0 +1,24 @@
+.text-service{
+    font-size: 0.7rem;
+}
+
+.text-card{
+    font-size: 0.8rem;
+}
+
+
+.custom-card{
+    border-radius: 2rem;
+    width: 25rem;
+    display: inline-block;
+}
+
+@media (min-width: 1200px) {
+    .custom-card {
+      max-width: 20rem;
+    }
+  }
+
+.b-card{
+    background-color: #7879ED;
+}

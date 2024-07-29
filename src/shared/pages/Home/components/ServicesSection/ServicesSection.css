@@ -1,0 +1,32 @@
+
+.h4-services{
+    color: #737373;
+}
+
+.p-services{
+    color: #737373;
+    font-size: 0.7rem;
+}
+
+.custom-card-service{
+    width: 20rem;
+    border: none;
+    display: inline-block;
+
+}
+
+.title-service{
+    font-size: 0.8rem;
+    color: #6667D1;
+}
+
+.text-service{
+    color: #6667D1;
+}
+
+.hr-service{
+    color: #6667D1;
+    height: 0rem;
+    border-width: 0.15rem;
+    border-color: #6667D1;
+}
