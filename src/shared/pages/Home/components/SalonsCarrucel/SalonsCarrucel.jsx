@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import SalonCard from '../SalonCard/SalonCard';
-import SpaAsset from '../../../../../assets/Spa_Asset.png';
+import SpaAsset from '../../../../../assets/Salon2.jpg';
 import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
