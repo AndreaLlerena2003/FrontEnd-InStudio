@@ -9,15 +9,10 @@
 
 .custom-card{
     border-radius: 2rem;
-    width: 25rem;
+    width: 20rem;
     display: inline-block;
+   
 }
-
-@media (min-width: 1200px) {
-    .custom-card {
-      max-width: 20rem;
-    }
-  }
 
 .b-card{
     background-color: #7879ED;

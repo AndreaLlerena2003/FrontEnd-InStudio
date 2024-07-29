@@ -5,7 +5,7 @@ import ServiceGrid from './components/ServiceGrid/ServiceGrid';
 import Haircut_IMG from '../../../../../assets/Haircut_Service.png';
 import Makeup_IMG from '../../../../../assets/Makeup_Service.png';
 import Nail_IMG from '../../../../../assets/Nail_Service.png';
-
+import './ServicesSection.css';
 function ServicesSection(){
     const servicesInformation = [
         {
@@ -28,10 +28,10 @@ function ServicesSection(){
         }
     ]
     return(
-    <div className='container-fluid'>
+    <div className='container-fluid mt-5'>
         <div className='vstack gap-0 mt-5'>
             <h4 className='fw-normal h4-services'>Services</h4>
-            <p className='fw-normal p-services'>Our service is not only renting a car, but we also provide a private chauffeur service that can guide you on your trip and also longtrip packages to support your travel needs.</p>
+            <p className='fw-normal p-services'>Look up the best service for your needs</p>
         </div>
         <ServiceGrid services={servicesInformation}/>
     </div>

@@ -5,7 +5,7 @@ import HomeADV2 from '../../../../../assets/Home_ADV_2.png';
 import HomeADV3 from '../../../../../assets/Home_ADV_3.png';
 import HomeADV4 from '../../../../../assets/Home_ADV_04.png';
 import AdvantageGrid from './components/AdvantageGrid';
-
+import './AdvantagesSection.css';
 const AdvantageInformation = [
     {
         id: 0,
@@ -35,7 +35,9 @@ const AdvantageInformation = [
 ]
 function AdvantagesSection(){
     return(
+      <div className='container d-flex justify-content-center'>
         <AdvantageGrid advantages={AdvantageInformation}/>
+      </div>
     )
 }
 
