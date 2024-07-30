@@ -4,7 +4,7 @@
 
 
 .tw-background-image {
-    background-image: url('../assets/SignUpImage.png');
+    background-image: url('../../../assets/SignUpImage.png');
     background-size: cover;
     background-position: center;
 }

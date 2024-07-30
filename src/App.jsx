@@ -3,7 +3,7 @@ import { BrowserRouter as Router,  Routes, Route , Navigate } from 'react-router
 import Header from './shared/Header/Header';
 import Home from './shared/pages/Home/Home';
 import FooterSection from './shared/Footer/Footer';
-import SignUp from './user/SignUp';
+import SignUp from './user/pages/SignUp/SignUp';
 function App() {
   return (
     <Router>
