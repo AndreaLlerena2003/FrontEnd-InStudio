@@ -5,6 +5,8 @@ import Home from './shared/pages/Home/Home';
 import FooterSection from './shared/Footer/Footer';
 import SignUp from './user/pages/SignUp/SignUp';
 import SignIn from './user/pages/SignIn/SignIn';
+import Search from "./shared/pages/Search/Search";
+
 function App() {
   return (
     <Router>
@@ -13,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />}/>
+          <Route path="/search" element={<Search />}/>
           <Route path="/signUp" element={<SignUp/>}/>
           <Route path="/signIn" element={<SignIn/>}/>
         </Routes>
