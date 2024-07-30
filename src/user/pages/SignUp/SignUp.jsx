@@ -30,7 +30,7 @@ function SignUp() {
                                 <label className="tw-inline-flex tw-items-center">
                                     <input type="checkbox" className="tw-border tw-border-gray-400"/>
                                     <span className="tw-ml-2 tw-text-sm sm:tw-text-base">
-                                        I accept the <a href="#" style={{color: "#7A7CE7"}} className="tw-font-semibold">Terms of Use</a> and <a href="#" style={{color: "#7A7CE7"}} className="tw-font-semibold">Privacy Policy</a>
+                                        I accept the <a href="#" style={{color: "#7A7CE7"}} className="tw-font-semibold">Terms & Conditions</a>
                                     </span>
                                 </label>
                             </div>
