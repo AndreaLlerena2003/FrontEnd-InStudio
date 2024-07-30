@@ -16,4 +16,12 @@
 
 .b-card{
     background-color: #7879ED;
+    border-color: #7879ED;
+    color: white;
+}
+
+.b-card:hover {
+    background-color: #8151b6; 
+    color: white;
+    border-color: #8151b6;
 }

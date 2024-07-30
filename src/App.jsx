@@ -3,7 +3,7 @@ import { BrowserRouter as Router,  Routes, Route , Navigate } from 'react-router
 import Header from './shared/Header/Header';
 import Home from './shared/pages/Home/Home';
 import FooterSection from './shared/Footer/Footer';
-
+import SignUp from './user/SignUp';
 function App() {
   return (
     <Router>
@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />}/>
+          <Route path="/signUp" element={<SignUp/>}/>
         </Routes>
         <FooterSection/>
       </div>
