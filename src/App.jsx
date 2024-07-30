@@ -5,6 +5,7 @@ import Home from './shared/pages/Home/Home';
 import FooterSection from './shared/Footer/Footer';
 import SignUp from './user/pages/SignUp/SignUp';
 import SignIn from './user/pages/SignIn/SignIn';
+import PreSignUp from './user/pages/PreSignUp/PreSignUp.jsx';
 function App() {
   return (
     <Router>
@@ -13,6 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />}/>
+          <Route path="/preSignUp" element={<PreSignUp/>}/>
+
           <Route path="/signUp" element={<SignUp/>}/>
           <Route path="/signIn" element={<SignIn/>}/>
         </Routes>
