@@ -1,6 +1,13 @@
 import './preSignUp.css'; 
+import { useNavigate } from 'react-router-dom';
 
 function PreSignUp(){
+    // Para la navegacion
+    const navigate = useNavigate();
+
+    const handleSignUpClick = () => {
+        navigate('/signUp');
+    };
     return (
         <div className="tw-min-h-screen tw-py-10 sm:tw-py-20">
         <div className="tw-container tw-mx-auto">
@@ -13,7 +20,7 @@ function PreSignUp(){
                     <h2 className="tw-text-2xl sm:tw-text-3xl tw-mb-3 sm:tw-mb-4">¿Quién eres?</h2>
                     <form action="#">
                         <div className="tw-mt-4">
-                            <button className="tw-w-full tw-py-3 tw-text-center tw-text-white" style={{backgroundColor: "#7A7CE7"}}>Soy una persona</button>
+                            <button className="tw-w-full tw-py-3 tw-text-center tw-text-white" onClick={handleSignUpClick} style={{backgroundColor: "#7A7CE7"}}>Soy una persona</button>
                             <p className="tw-mb-3 sm:tw-mb-4 tw-text-center tw-font-bold" style={{color: "#7A7CE7", margin: "5px 0"}}>o</p>
                             <button className="tw-w-full tw-py-3 tw-text-center tw-text-white" style={{backgroundColor: "#7A7CE7"}}>Soy un salon de belleza</button>
                         </div>
