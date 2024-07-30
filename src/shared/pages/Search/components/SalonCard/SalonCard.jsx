@@ -3,7 +3,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 function SalonCard(props) {
   return (
     <div className="tw-flex tw-flex-1 tw-flex-col tw-bg-white tw-rounded-xl tw-border-solid tw-border-[1px] tw-border-slate-300 tw-shadow-md">
-      <img className="tw-w-full" src={props.image} />
+      <img className="tw-h-44" src={props.image} />
       <div className="tw-p-2">
         <h5 className="">Jaguar F-Pace</h5>
         <div className="row">
