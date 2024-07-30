@@ -17,7 +17,7 @@ function SalonCard(props){
                             <FaMapMarkerAlt></FaMapMarkerAlt>                   
                     </div>
                 </div>
-                <a href="#" className="btn btn-primary b-card">Look Now</a>
+                <a href="#" className="btn b-card">Look Now</a>
             </div>
         </div>
     )
