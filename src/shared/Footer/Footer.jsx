@@ -35,7 +35,12 @@ function FooterSection() {
             <div className="col-lg-3 mb-3">
                 <h4 style={{ textAlign: "start" ,  fontSize: "0.8rem"}}>Registrate</h4>
                 <div className="row">
-                    <p className="text-start" style={{fontSize: "0.6rem"}}>Vuelve parte de nosotros</p>
+                    <p 
+                        onClick={() => window.location.href = "/signUp"}
+                        style={{ textAlign: "start", cursor: "pointer" , fontSize: "0.6rem"}}
+                    >
+                        Vuelvete parte de nosotros
+                    </p>
                 </div>
             </div>
         </footer>
