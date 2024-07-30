@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />}/>
           <Route path="/search" element={<Search />}/>
-          {/* <Route path="/search/:id" element={<Salon />}/> CUANDO SE DE CLICK EN UN ITEM DEL RESULTADO DE BÚSQUEDA, PARA MOSTRAR EL DETALLE DE UN SALÓN */}
+          {/* <Route path="/salon/:id" element={<Salon />}/> CUANDO SE DE CLICK EN UN ITEM DEL RESULTADO DE BÚSQUEDA, PARA MOSTRAR EL DETALLE DE UN SALÓN */}
           <Route path="/signUp" element={<SignUp/>}/>
           <Route path="/signIn" element={<SignIn/>}/>
         </Routes>
