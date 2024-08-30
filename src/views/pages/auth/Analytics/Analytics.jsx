@@ -1,7 +1,27 @@
-import { BiDownload, BiCalendar, BiSearchAlt, BiCoin, BiPhoneOutgoing } from "react-icons/bi";
+import {
+  BiDownload,
+  BiCalendar,
+  BiSearchAlt,
+  BiCoin,
+  BiPhoneOutgoing,
+} from "react-icons/bi";
 import CustomMetric from "../../../../shared/CustomMetric/CustomMetrix";
+import { chartdata } from "../../../../utils";
+import {
+  CartesianGrid,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+} from "recharts";
 
 export default function Analytics() {
+  const dataFormatter = (number) =>
+    `$${Intl.NumberFormat("us").format(number).toString()}`;
+
   return (
     <div className="">
       <h2>Analíticas</h2>
@@ -31,6 +51,54 @@ export default function Analytics() {
         />
       </div>
       <hr />
+
+      <div className="tw-flex tw-flex-row tw-justify-between tw-gap-4 tw-h-72 tw-mt-10">
+        <div className="tw-flex tw-flex-1 tw-flex-col">
+          <h4>Vistas </h4>
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart
+              width={500}
+              height={300}
+              data={chartdata}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="1" vertical={false} />
+              <XAxis dataKey="name" />
+              <YAxis axisLine={false} />
+              <Tooltip />
+              <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="tw-w-px tw-bg-gray-300"></div>
+        <div className="tw-flex tw-flex-1 tw-flex-col">
+          <h4>Reservas </h4>
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart
+              width={500}
+              height={300}
+              data={chartdata}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="1" vertical={false} />
+              <XAxis dataKey="name" />
+              <YAxis axisLine={false} />
+              <Tooltip />
+              <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
 
       <div className="tw-absolute tw-right-0 tw-top-0 tw-pr-10 tw-pt-14 tw-flex tw-flex-row tw-gap-2">
         <div className="tw-flex tw-items-center tw-justify-center tw-text-sm">
