@@ -8,7 +8,7 @@ import "./auth.layout.css";
 import SideNavbar from "../../../shared/SideNavbar/SideNavbar";
 import { BiHome, BiStats } from "react-icons/bi";
 import Analytics from "../../pages/auth/Analytics/Analytics";
-
+import Offers from "../../pages/Offers/Offers";
 export default function AuthLayout() {
   const tabsData = [
     {
@@ -42,6 +42,7 @@ export default function AuthLayout() {
             element={<div>Hola como estas, di funciona</div>}
           />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/card" element={<Offers />} />
           {/* Add more Routes as needed */}
         </Routes>
       </div>
