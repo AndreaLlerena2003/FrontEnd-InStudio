@@ -1,18 +1,17 @@
-/* Agrega esto a tu archivo de estilos CSS */
 .offer-card {
     background-color: #F0F0FA;
-    border-radius: 0.5rem; /* Similar a Tailwind's 'rounded-lg' */
-    padding: 1rem; /* Similar a Tailwind's 'p-4' */
+    border-radius: 0.5rem; 
+    padding: 1rem; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem; /* Similar a Tailwind's 'mb-4' */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Similar a Tailwind's 'shadow' */
+    margin-bottom: 1rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     cursor: pointer;
-    transition: all 0.2s; /* Similar a Tailwind's 'transition-all duration-200' */
+    transition: all 0.2s; 
   }
   
   .offer-card:hover {
-    background-color: #ADAEFF; /* Color de fondo al pasar el mouse */
+    background-color: #ADAEFF; 
   }
   
