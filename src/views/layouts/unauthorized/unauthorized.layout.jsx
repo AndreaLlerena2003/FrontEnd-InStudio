@@ -5,6 +5,8 @@ import PreSignUp from "../../pages/PreSignUp/PreSignUp";
 import Search from "../../pages/Search/Search";
 import SignIn from "../../pages/SignIn/SignIn";
 import SignUp from "../../pages/SignUp/SignUp";
+import ClientOffers from "../../pages/Offers/Client/Offersclient.jsx";
+
 import "./unauthorized.layout.css";
 import {
   BrowserRouter as Router,
@@ -25,6 +27,8 @@ export default function UnauthorizedLayout() {
         <Route path="/preSignUp" element={<PreSignUp />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/signIn" element={<SignIn />} />
+        <Route path="/offers" element={<ClientOffers />} />
+
       </Routes>
       <FooterSection />
     </div>
