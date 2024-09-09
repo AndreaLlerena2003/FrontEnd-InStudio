@@ -1,4 +1,4 @@
-import OfferCardClient from '../Client/components/OfferclientCard';
+import OfferCardClient from './components/OfferClientCard';
 function OffersClient() {
     // Datos de ejemplo de ofertas
     const offers = [

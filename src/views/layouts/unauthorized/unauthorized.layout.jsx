@@ -5,7 +5,7 @@ import PreSignUp from "../../pages/PreSignUp/PreSignUp";
 import Search from "../../pages/Search/Search";
 import SignIn from "../../pages/SignIn/SignIn";
 import SignUp from "../../pages/SignUp/SignUp";
-import ClientOffers from "../../pages/Offers/Client/Offersclient.jsx";
+import ClientOffers from "../../pages/Offers/Client/OffersClient.jsx";
 
 import "./unauthorized.layout.css";
 import {
