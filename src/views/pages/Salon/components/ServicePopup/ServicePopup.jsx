@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
+import DateTimePopup from '../DateTimePopup/DateTimePopup';
 
 const ServicePopup = ({ service, onClose }) => {
-  // Ejemplo de datos para la tabla
+  
+  
+
   const subservices = [
     { name: "Subservicio 1", price: "20" },
     { name: "Subservicio 2", price: "30" },
@@ -10,9 +13,16 @@ const ServicePopup = ({ service, onClose }) => {
   ];
 
   const [selectedSubservice, setSelectedSubservice] = useState(null);
+  const [showDateTimePopup, setShowDateTimePopup] = useState(false);
 
   const handleRowClick = (subservice) => {
     setSelectedSubservice(subservice);
+  };
+
+  const handleReserveClick = () => {
+    if (selectedSubservice) {
+      setShowDateTimePopup(true); // Muestra el popup para seleccionar fecha y hora
+    }
   };
 
   return (
@@ -55,6 +65,7 @@ const ServicePopup = ({ service, onClose }) => {
             Servicio: {selectedSubservice ? selectedSubservice.name : 'Seleccionar un servicio'}
           </p>
           <button
+            onClick={handleReserveClick}
             style={{backgroundColor: "#7A7CE7"}}
             className={`tw-bg-purple-600 tw-text-white tw-py-1 tw-border-0 tw-px-4 tw-rounded-lg hover:tw-bg-purple-700 ${!selectedSubservice ? 'tw-opacity-50 tw-cursor-not-allowed' : ''}`}
             disabled={!selectedSubservice}
@@ -62,8 +73,9 @@ const ServicePopup = ({ service, onClose }) => {
             Reservar
           </button>
         </div>
-
       </div>
+      {/* Popup para seleccionar fecha y hora */}
+      {showDateTimePopup && <DateTimePopup onClose={() => setShowDateTimePopup(false)} />}
     </div>
   );
 };

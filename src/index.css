@@ -12,3 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.boton-morado{
+  color: "#7A7CE7"
+}
+
+.letra-morada{
+  background-color: "#7A7CE7"
+}

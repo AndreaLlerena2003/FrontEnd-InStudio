@@ -1,0 +1,75 @@
+
+.react-calendar {
+    width: 70%;
+    border: none;
+    z-index: 10;
+    margin: auto;
+  }
+  
+  /*Titulo del mes*/
+  .react-calendar__navigation button {
+    color: #4a4a4a; /* Color gris oscuro */
+    font-weight: 600;
+    text-transform: capitalize; /* Solo primera letra en mayúsculas */
+    font-size: 0.868rem;
+  }
+  
+  /*Dia de la semana*/
+  .react-calendar__month-view__weekdays {
+    font-weight: 600;
+    text-transform: uppercase; /* Mayúsculas completas */
+    color: #cccccc; /* Gris claro */
+    text-decoration: none !important;
+    -webkit-text-decoration: none !important;
+  }
+  .react-calendar__month-view__weekdays abbr {
+    text-decoration: none !important; /* Remover subrayado */
+    -webkit-text-decoration: none !important; /* Eliminar subrayado punteado */
+  }
+  
+  /* Asegurar que los días tengan forma cuadrada */
+.react-calendar__tile {
+    width: 100%; /* Asegurar que los días ocupen el espacio disponible */
+    aspect-ratio: 1 / 1; /* Forzar que el contenedor sea un cuadrado */
+    display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+  }
+
+/* Días del mes actual */
+.react-calendar__tile:not(.react-calendar__month-view__days__day--neighboringMonth) {
+    color: #4a4a4a; /* Color gris oscuro */
+    font-weight: 600;
+  }
+  
+  /* Días fuera del mes actual */
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: #d3d3d3; /* Color gris claro */
+    font-weight: 400; /* Peso de fuente más ligero si lo prefieres */
+  }
+  
+  /* Mes seleccioando */
+  .react-calendar__tile--active {
+    background-color: #efadc2; /* Circulo rosado */
+    color: white; /* Número en blanco cuando esté seleccionado */
+    border-radius: 50%;
+  }
+  
+  /* Dia de hoy */
+  .react-calendar__tile--now {
+    background-color: #f0f0f0; /* Opcional para resaltar la fecha actual */
+  }
+  
+  .react-calendar__tile:enabled:focus {
+    background-color: #CC3868; /* Color rosado claro al pasar el mouse */
+    color: white;
+    border-radius: 50%;
+  }
+
+  .react-calendar__tile:enabled:hover {
+    background-color: #efadc2; /* Color rosado claro al pasar el mouse */
+    color: white;
+    border-radius: 50%;
+  }
+  
+  
