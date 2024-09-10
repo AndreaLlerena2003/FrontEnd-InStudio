@@ -1,0 +1,56 @@
+.side-navbar {
+  /* Styling for the side navbar */
+}
+
+.navbar-logo {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.navbar-logo > img {
+  height: 25px;
+  display: inline-block;
+}
+
+.navbar-logo > span {
+  font-size: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+  color: #7879ed;
+}
+
+.navbar-list {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.logout-section {
+  /* text-align: center; */
+  text-decoration: none;
+}
+
+.divider {
+  color: #898989;
+  font-size: 12px;
+}
+
+.out {
+  display: flex;
+  align-items: center;
+  color: red !important;
+  text-decoration: none;
+  padding-left: 8px;
+  font-weight: 500;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.out span {
+  color: red !important;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.outIcon {
+  color: red !important;
+}
