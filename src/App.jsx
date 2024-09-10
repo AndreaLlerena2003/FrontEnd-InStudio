@@ -1,19 +1,22 @@
-import './App.css';
-import { BrowserRouter as Router,  Routes, Route , Navigate } from 'react-router-dom';
-import Header from './shared/Header/Header';
-
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { AuthLayout, UnauthorizedLayout } from "./views/layouts/index.js";
+import ProtectedRoute from "./shared/ProtectedRoute/ProtectedRoute.jsx";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home"/>
-        </Routes>
-      </div>
+      <Routes>
+        <Route
+          path="/auth/*"
+          element={
+            <ProtectedRoute>
+              <AuthLayout />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route path="/*" element={<UnauthorizedLayout />} />
+      </Routes>
     </Router>
   );
 }
