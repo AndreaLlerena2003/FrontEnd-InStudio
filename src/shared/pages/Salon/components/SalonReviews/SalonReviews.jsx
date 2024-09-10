@@ -13,11 +13,12 @@ const SalonReviews = ({ reviews, salonServices }) => {
       {/* Header de Opiniones */}
       <div className="tw-flex tw-items-center tw-justify-between">
         <h1 className="tw-text-2xl tw-font-bold">{filteredReviews.length} opiniones</h1>
+        {/* Filtro */}
         <div className="tw-relative">
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="tw-py-2 tw-px-4 tw-rounded-lg tw-border tw-shadow-sm"
+            className="tw-py-2 tw-mx-6 tw-rounded-lg tw-border tw-shadow-sm"
           >
             <option value="All">Todos los servicios</option>
             {salonServices.map((service, index) => (

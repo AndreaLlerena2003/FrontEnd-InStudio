@@ -129,7 +129,7 @@ const Salon = () => {
           <>
             <SalonInfo salon={salon} />
             <div 
-              className="tw-w-full tw-h-64 tw-bg-repeat tw-rounded-lg"
+              className="tw-w-full tw-h-96 tw-bg-repeat tw-rounded-lg"
               style={{ 
                 backgroundImage: `url(${salon.image})`,
                 backgroundSize: '200px 200px',
@@ -142,7 +142,7 @@ const Salon = () => {
                 <SalonDetails salon={salon} />
               </div>
               <div className="tw-flex-1">
-                <Services services={services} />
+                <Services salonId={salon.id} services={services} />
               </div>
             </div>
             <SalonReviews reviews={salonOpinions} salonServices={services} />
