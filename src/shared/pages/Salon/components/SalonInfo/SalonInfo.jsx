@@ -13,17 +13,18 @@ const SalonInfo = ({ salon }) => {
   return (
     <div className="tw-flex tw-justify-between tw-items-center">
       <div className="tw-flex tw-items-center">
-        <h1 className="tw-py-12 tw-flex tw-items-center">
-          {salon.name}
+      <h1 className="tw-py-12 tw-flex tw-items-center">
+        <span className="">{salon.name}</span>
+        <div className="tw-ml-8">
           <ReactStars
             count={5}
             value={salon.rating}
             size={24}
             activeColor="#000000"
             edit={false}
-            className="tw-ml-5"
           />
-        </h1>
+        </div>
+      </h1>
       </div>
       <div className="tw-cursor-pointer">
         <FaHeart
