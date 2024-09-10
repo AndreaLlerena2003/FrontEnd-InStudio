@@ -1,5 +1,5 @@
 import React from "react";
-import "./OfferCardClient.css";
+import "./OfferClientCard.css";
 function OfferCardClient({ title, description, discount, onClick }) {
     return (
       <div
