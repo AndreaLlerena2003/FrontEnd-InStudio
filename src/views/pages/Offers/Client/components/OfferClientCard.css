@@ -1,17 +1,26 @@
 .offer-card {
-    background-color: #F0F0FA;
-    border-radius: 0.5rem; 
-    padding: 1rem; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    cursor: pointer;
-    transition: all 0.2s; 
-  }
-  
-  .offer-card:hover {
-    background-color: #ADAEFF; 
-  }
-  
+  background-color: #F0F0FA;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.offer-card:hover {
+  background-color: #ADAEFF;
+}
+
+.offer-card .tw-text-3xl {
+  padding-left: 1rem; /* Añade un padding a la izquierda */
+}
+
+.offer-card .discount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 1rem;
+}
