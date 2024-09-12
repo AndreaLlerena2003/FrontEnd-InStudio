@@ -1,4 +1,4 @@
-import React,  { useState } from 'react';
+import React, { useState } from 'react';
 import ServiceTable from '../../../../../shared/ServicesTable/ServiceTable.jsx';
 
 const OfferDetail = ({ offer, onBack }) => {
@@ -14,9 +14,9 @@ const OfferDetail = ({ offer, onBack }) => {
 
   return (
     <div className="tw-p-4">
-      <button 
+      <button
         onClick={onBack}
-        className="tw-mb-4 tw-flex tw-items-center tw-text-gray-600 hover:tw-text-gray-800"
+        className="tw-mb-4 tw-flex tw-items-center tw-text-gray-600 hover:tw-text-purple-600 tw-transition-colors tw-duration-200 tw-ease-in-out"
       >
         <svg className="tw-w-6 tw-h-6 tw-mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -34,7 +34,7 @@ const OfferDetail = ({ offer, onBack }) => {
         </div>
       </div>
       <ServiceTable services={offer.services} />
-      
+
       <form onSubmit={handleSubmit} className="tw-mt-6">
         <div className="tw-mb-4">
           <label htmlFor="day" className="tw-block tw-text-sm tw-font-medium tw-text-gray-700">Día:</label>
@@ -58,7 +58,7 @@ const OfferDetail = ({ offer, onBack }) => {
             required
           />
         </div>
-        <button 
+        <button
           type="submit"
           className="tw-w-full tw-bg-purple-600 tw-text-white tw-py-2 tw-rounded-lg hover:tw-bg-purple-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-purple-500 focus:tw-ring-opacity-50"
         >
