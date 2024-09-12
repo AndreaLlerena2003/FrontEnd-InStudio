@@ -1,56 +1,72 @@
-import './OfferDetailClient.css';
-function OfferDetail({ offer, onBack }) {
+import React,  { useState } from 'react';
+import ServiceTable from '../../../../../shared/ServicesTable/ServiceTable.jsx';
+
+const OfferDetail = ({ offer, onBack }) => {
+  const [day, setDay] = useState(offer.day || '');
+  const [hour, setHour] = useState(offer.hour || '');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí iría la lógica para procesar la reserva
+    console.log('Reserva enviada:', { day, hour });
+    // Puedes agregar aquí la lógica para enviar los datos al servidor
+  };
+
   return (
-    <div className="offer-detail">
-      <div className="tw-flex tw-justify-between tw-items-center tw-mb-4">
-        <button className="back-button" onClick={onBack}>←</button>
-        <h2 className="tw-text-2xl tw-font-bold">{offer.title}</h2>
-      </div>
-      <img src={offer.image} alt={offer.title} />
-      <div className="tw-flex tw-justify-between tw-mb-2">
-        <span className="tw-font-bold">DESCRIPCIÓN</span>
-        <span className="tw-font-bold">DESCUENTO</span>
-      </div>
+    <div className="tw-p-4">
+      <button 
+        onClick={onBack}
+        className="tw-mb-4 tw-flex tw-items-center tw-text-gray-600 hover:tw-text-gray-800"
+      >
+        <svg className="tw-w-6 tw-h-6 tw-mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Volver a ofertas
+      </button>
+
+      <img src={offer.image} alt={offer.title} className="tw-w-full tw-rounded-lg tw-mb-4" />
+      <p className="tw-mb-2"><strong>DESCRIPCIÓN:</strong> {offer.description}</p>
+      <p className="tw-mb-4"><strong>DESCUENTO:</strong> {offer.discount}</p>
       <div className="tw-flex tw-justify-between tw-mb-4">
-        <span>{offer.description}</span>
-        <span>{offer.discount}</span>
-      </div>
-      <div className="tw-mb-4">
-        <div className="tw-flex tw-justify-between">
-          <span className="tw-font-bold">INICIO</span>
-          <span>{offer.start}</span>
-        </div>
-        <div className="tw-flex tw-justify-between">
-          <span className="tw-font-bold">FINAL</span>
-          <span>{offer.end}</span>
-        </div>
-        <div className="tw-flex tw-justify-between tw-mt-2">
-          <span className="tw-font-bold">Día</span>
-          <span>{offer.day}</span>
-        </div>
-        <div className="tw-flex tw-justify-between">
-          <span className="tw-font-bold">Hora</span>
-          <span>{offer.hour}</span>
+        <div>
+          <p><strong>INICIO:</strong> {offer.start}</p>
+          <p><strong>FINAL:</strong> {offer.end}</p>
         </div>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Servicio</th>
-            <th>Precio</th>
-          </tr>
-        </thead>
-        <tbody>
-          {offer.services.map((service, index) => (
-            <tr key={index}>
-              <td>{service.name}</td>
-              <td>{service.price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <button className="reserve-button">Reservar</button>
+      <ServiceTable services={offer.services} />
+      
+      <form onSubmit={handleSubmit} className="tw-mt-6">
+        <div className="tw-mb-4">
+          <label htmlFor="day" className="tw-block tw-text-sm tw-font-medium tw-text-gray-700">Día:</label>
+          <input
+            type="date"
+            id="day"
+            value={day}
+            onChange={(e) => setDay(e.target.value)}
+            className="tw-mt-1 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-indigo-300 focus:tw-ring focus:tw-ring-indigo-200 focus:tw-ring-opacity-50"
+            required
+          />
+        </div>
+        <div className="tw-mb-4">
+          <label htmlFor="hour" className="tw-block tw-text-sm tw-font-medium tw-text-gray-700">Hora:</label>
+          <input
+            type="time"
+            id="hour"
+            value={hour}
+            onChange={(e) => setHour(e.target.value)}
+            className="tw-mt-1 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-indigo-300 focus:tw-ring focus:tw-ring-indigo-200 focus:tw-ring-opacity-50"
+            required
+          />
+        </div>
+        <button 
+          type="submit"
+          className="tw-w-full tw-bg-purple-600 tw-text-white tw-py-2 tw-rounded-lg hover:tw-bg-purple-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-purple-500 focus:tw-ring-opacity-50"
+        >
+          Reservar
+        </button>
+      </form>
     </div>
   );
-}
+};
+
 export default OfferDetail;

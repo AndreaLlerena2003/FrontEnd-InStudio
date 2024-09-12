@@ -7,17 +7,18 @@ function OffersClient() {
   const [selectedOffer, setSelectedOffer] = useState(null);
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (isOpen && !selectedOffer) {
+    if (isOpen) {
       fetchOffers();
     }
-  }, [isOpen, selectedOffer]);
+  }, [isOpen]);
 
   const fetchOffers = async () => {
     setLoading(true);
+    setError(null);
     try {
-      // Simula una llamada a la API
       const data = [
         { id: 1, title: "Nicos", description: "Todo bueno, todo chevere. Servicio de uñas para que queden bien uwu", discount: "30%" },
         { id: 2, title: "Nicos", description: "Todo bueno, todo chevere. Servicio de uñas para que queden bien uwu", discount: "30%" },
@@ -28,6 +29,7 @@ function OffersClient() {
       setOffers(data);
     } catch (error) {
       console.error('Error fetching offers:', error);
+      setError('Hubo un problema al cargar las ofertas.');
     } finally {
       setLoading(false);
     }
@@ -35,9 +37,8 @@ function OffersClient() {
 
   const fetchOfferDetails = async (id) => {
     setLoading(true);
-    console.log("fetchOfferDetails", id);
+    setError(null);
     try {
-      // Simula una llamada a la API para obtener detalles
       const data = {
         id: id,
         title: "Nicos",
@@ -51,22 +52,49 @@ function OffersClient() {
         services: [
           { name: "Uñas acrílicas", price: "$7.25 - $8.17" },
           { name: "Uñas de gel", price: "$7.25 - $8.17" },
+          { name: "Uñas de gel", price: "$7.25 - $8.17" },
+          { name: "Uñas de gel", price: "$7.25 - $8.17" },
+          { name: "Uñas de gel", price: "$7.25 - $8.17" },
         ]
       };
       setSelectedOffer(data);
     } catch (error) {
       console.error('Error fetching offer details:', error);
+      setError('Hubo un problema al cargar los detalles de la oferta.');
     } finally {
       setLoading(false);
     }
+  };
+
+  const renderContent = () => {
+    if (loading) {
+      return <p>Cargando...</p>;
+    }
+    if (error) {
+      return <p className="error-message">{error}</p>;
+    }
+    if (selectedOffer) {
+      return (
+        <OfferDetail 
+          offer={selectedOffer} 
+          onBack={() => setSelectedOffer(null)} 
+        />
+      );
+    }
+    return (
+      <OfferListClient 
+        offers={offers} 
+        onOfferClick={fetchOfferDetails} 
+      />
+    );
   };
 
   if (!isOpen) return null;
 
   return (
     <div className="tw-fixed tw-inset-0 tw-backdrop-blur-md tw-flex tw-justify-center tw-items-center">
-      <div className="tw-bg-white tw-rounded-2xl tw-shadow-2xl tw-w-full tw-max-w-lg tw-m-4 tw-p-6 tw-pb-10">
-        <div className="tw-flex tw-justify-between tw-items-center tw-mb-6">
+      <div className="tw-bg-white tw-rounded-2xl tw-shadow-2xl tw-w-full tw-max-w-lg tw-m-4 tw-p-6 tw-mx-4 tw-my-8 sm:tw-mx-8 sm:tw-my-16">
+        <div className="tw-flex tw-justify-between tw-items-center tw-mb-4 tw-sticky tw-top-0 tw-bg-white">
           <h1 className="tw-text-2xl sm:tw-text-3xl tw-font-bold">
             {selectedOffer ? selectedOffer.title : "Ofertas"}
           </h1>
@@ -77,21 +105,9 @@ function OffersClient() {
             ×
           </button>
         </div>
-        {loading ? (
-          <p>Cargando...</p>
-        ) : selectedOffer ? (
-          <OfferDetail 
-            offer={selectedOffer} 
-            onBack={() => setSelectedOffer(null)}
-          />
-        ) : (
-          <div className="tw-overflow-y-auto tw-max-h-96 tw-p-4">
-            <OfferListClient 
-              offers={offers} 
-              onOfferClick={fetchOfferDetails} 
-            />
-          </div>
-        )}
+        <div className="tw-max-h-[70vh] tw-overflow-y-auto tw-pb-4 tw-pr-4 tw-mr-[-4px]">
+          {renderContent()}
+        </div>
       </div>
     </div>
   );
