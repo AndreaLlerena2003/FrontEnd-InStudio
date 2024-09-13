@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ServiceTable from '../../../../../shared/ServicesTable/ServiceTable.jsx';
-
+import './OfferDetailClient.css'
 const OfferDetail = ({ offer, onBack }) => {
   const [day, setDay] = useState(offer.day || '');
   const [hour, setHour] = useState(offer.hour || '');
@@ -16,7 +16,7 @@ const OfferDetail = ({ offer, onBack }) => {
     <div className="tw-p-4">
       <button
         onClick={onBack}
-        className="tw-mb-4 tw-flex tw-items-center tw-text-gray-600 hover:tw-text-purple-600 tw-transition-colors tw-duration-200 tw-ease-in-out"
+        className="tw-mb-4 tw-flex tw-items-center tw-text-gray-600 hover-text-custom tw-transition-colors tw-duration-200 tw-ease-in-out tw-bg-transparent tw-border-none tw-px-0"
       >
         <svg className="tw-w-6 tw-h-6 tw-mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -43,7 +43,7 @@ const OfferDetail = ({ offer, onBack }) => {
             id="day"
             value={day}
             onChange={(e) => setDay(e.target.value)}
-            className="tw-mt-1 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-indigo-300 focus:tw-ring focus:tw-ring-indigo-200 focus:tw-ring-opacity-50"
+            className="tw-mt-1 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm tw-px-3 tw-py-2 focus:tw-border-indigo-300 focus:tw-ring focus:tw-ring-indigo-200 focus:tw-ring-opacity-50"
             required
           />
         </div>
@@ -54,13 +54,13 @@ const OfferDetail = ({ offer, onBack }) => {
             id="hour"
             value={hour}
             onChange={(e) => setHour(e.target.value)}
-            className="tw-mt-1 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-indigo-300 focus:tw-ring focus:tw-ring-indigo-200 focus:tw-ring-opacity-50"
+            className="tw-mt-1 tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm tw-px-3 tw-py-2 focus:tw-border-indigo-300 focus:tw-ring focus:tw-ring-indigo-200 focus:tw-ring-opacity-50"
             required
           />
         </div>
         <button
           type="submit"
-          className="tw-w-full tw-bg-purple-600 tw-text-white tw-py-2 tw-rounded-lg hover:tw-bg-purple-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-purple-500 focus:tw-ring-opacity-50"
+          className="tw-w-full tw-text-white tw-py-2 tw-rounded-lg hover:tw-bg-purple-700 focus:tw-outline-none focus:tw-ring-0 tw-border-0 reserve-button"
         >
           Reservar
         </button>
